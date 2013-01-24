@@ -12,8 +12,8 @@
             <version>${tapestry-release-version}</version>
         </dependency>
         <!-- A dependency on either JUnit or TestNG is required, or the surefire plugin (which runs the tests)
-        will fail, preventing Maven from packaging the WAR. Tapestry includes a large number
-        of testing facilities designed for use with TestNG (http://testng.org/), so it's recommended. -->
+will fail, preventing Maven from packaging the WAR. Tapestry includes a large number
+of testing facilities designed for use with TestNG (http://testng.org/), so it's recommended. -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -36,7 +36,7 @@
         </dependency>
 
         <!-- Provided by the servlet container, but sometimes referenced in the application
-        code. -->
+       code. -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -64,16 +64,16 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>6.1.16</version>
                 <configuration>
-                    <contextPath>/</contextPath> 
+                    <contextPath>/</contextPath>                     
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                            <port>8080</port>
+                            <port>8082</port>
                         </connector>
-                    </connectors>                    
+                    </connectors>
                     <!-- Log to the console. -->
                     <!--<requestLog implementation="org.mortbay.jetty.NCSARequestLog">-->
                         <!-- This doesn't do anything for Jetty, but is a workaround for a Maven bug
-                        that prevents the requestLog from being set. -->
+                             that prevents the requestLog from being set. -->
                         <!--<append>true</append>-->
                     <!--</requestLog>-->
                 </configuration>
@@ -108,7 +108,7 @@
     <pluginRepositories>
 
         <!-- As above, this can be commented out when access to the snapshot version
-        of a Tapestry Maven plugin is not required.   -->
+of a Tapestry Maven plugin is not required.   -->
         <pluginRepository>
             <id>apache-snapshots</id>
             <url>http://repository.apache.org/snapshots/</url>
@@ -117,6 +117,6 @@
     </pluginRepositories>
 
     <properties>
-        <tapestry-release-version>5.2.5</tapestry-release-version>
+        <tapestry-release-version>5.4-SNAPSHOT</tapestry-release-version>
     </properties>
 </project>
